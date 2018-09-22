@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffeeLight"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="COFFEE ORDER"
+        android:fontFamily="monospace"
+
+        android:textColor="@color/coffeeDark"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <TextView
+            android:fontFamily="monospace"
+            android:text="Price of coffee: ₹"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:inputType="numberDecimal"
+            android:maxLength="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextTheme" />
+</LinearLayout>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:background="@drawable/coffee"
+        android:id="@+id/imageView"
+        android:layout_width="230dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/rl"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <Button
+        android:backgroundTint="@color/coffeeDark"
+        android:textColor="@color/coffeeLight"
+        android:id="@+id/bAdd"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+" />
+
+    <Button
+        android:backgroundTint="@color/coffeeDark"
+        android:textColor="@color/coffeeLight"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:id="@+id/bSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-" />
+    </LinearLayout>
+
+    <TextView
+        android:fontFamily="monospace"
+        android:padding="20dp"
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:text="Quantity: \nTotal Cost:"
+        android:textColor="@color/coffeeDark"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+</RelativeLayout>
